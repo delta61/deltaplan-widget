@@ -5,5 +5,12 @@
     ini_set('display_startup_errors', 1); 
 
 
+    $arr = explode ('/' , $_SERVER['REQUEST_URI']);
 
-    echo 'main.js';
+    if ($arr[2]) {
+        var_dump ($_SERVER);   
+
+
+    }
+
+
