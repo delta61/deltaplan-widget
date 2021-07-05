@@ -1,0 +1,56 @@
+
+
+#php_flag register_globals Off
+AddDefaultCharset utf-8
+php_value date.timezone Europe/Moscow
+
+#Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /
+
+
+# without www
+#	RewriteCond %{HTTP_HOST} .
+#	RewriteCond %{HTTP_HOST} !^i\.delta-ltd\.ru [NC]
+#	RewriteRule (.*) http://i.delta-ltd.ru/$1 [R=301,L]
+
+
+
+# Reduce server overhead by enabling output compression if supported.
+	php_flag zlib.output_compression On
+	php_value zlib.output_compression_level 9
+	
+	Options -indexes
+	
+	<IfModule mod_deflate.c>
+	    AddEncoding gzip .gz
+	    AddOutputFilterByType DEFLATE text/css
+	    AddOutputFilterByType DEFLATE text/javascript
+	    AddOutputFilterByType DEFLATE text/plain
+	    AddOutputFilterByType DEFLATE text/x-component
+	    AddOutputFilterByType DEFLATE text/xml
+	    AddOutputFilterByType DEFLATE application/x-javascript
+	    AddOutputFilterByType DEFLATE application/javascript
+	    AddOutputFilterByType DEFLATE application/json
+	    AddOutputFilterByType DEFLATE application/xml
+	    AddOutputFilterByType DEFLATE application/rss+xml
+	    AddOutputFilterByType DEFLATE application/atom+xml
+	    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+	    AddOutputFilterByType DEFLATE image/x-icon
+	    AddOutputFilterByType DEFLATE image/svg+xml
+	    AddOutputFilterByType DEFLATE font/truetype
+	    AddOutputFilterByType DEFLATE font/opentype
+	    AddOutputFilterByType DEFLATE font/ttf
+	    AddOutputFilterByType DEFLATE font/otf
+	    AddOutputFilterByType DEFLATE font/x-woff
+	</IfModule>
+	<IfModule mod_expires.c>
+		ExpiresActive on
+		ExpiresDefault A604800
+		ExpiresByType image/jpeg A604800
+		ExpiresByType image/gif A604800
+		<FilesMatch .*\.(shtml|html|phtml|php)$>
+	        	ExpiresActive Off
+		</FilesMatch>
+	</IfModule>
+# -----------------------------------------------------------------------
