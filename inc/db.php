@@ -7,6 +7,8 @@ if ( ! $res) exit('db connect error');
 
 
 
+
+
 class DB
 {
     private $w = false;
