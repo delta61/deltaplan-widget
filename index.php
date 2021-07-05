@@ -1,29 +1,32 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Личный кабинет Дельтаплан</title>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css"
-        integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+<?php
 
-</head>
-<body>
+if (isset($_GET['register'])){
+    if (!isset($_GET['email']) || $_GET['email'] == '') {
+
+    } else {
+        
+    }
+
+}
 
 
-    <?php
+?>
 
-        echo '34322';
-    ?>
+<p>Регистрация</p> 
 
-    <script>
+<form>
+    <label for="email">E-mail</label>
+    <input name="email" />
+    <input type="hidden" name="register" />
 
+    <input type="submit" value="Регистрация" />
+</form>
+<br><br>
+<p>Войти</p> 
 
-    </script>
-
-</body>
-</html>
+<form>
+    <label for="email">E-mail</label>
+    <input name="email" />
+    <label for="email">Password</label>
+    <input name="password" />
+</form>
