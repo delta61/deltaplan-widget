@@ -8,8 +8,31 @@
     $arr = explode ('/' , $_SERVER['REQUEST_URI']);
 
     if ($arr[2]) {
-        var_dump ($_SERVER);   
 
+        if (isset($_SERVER['HTTP_REFERER'])) {
+
+            $domain = 'pnevmo-mash.alfaltd.ru'; // taking from db
+
+
+            
+
+            $host = parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST);
+
+            // var_dump ($host, $domain);
+
+            if ($host === $domain){
+                //
+                echo 'yeap';
+
+
+            } else {
+                echo "console.log ('Error while loading main.js');";
+            }
+
+        } else {
+            //sfd
+        }
+         
 
     }
 
