@@ -5,6 +5,8 @@ $res = $db->connect($db_host, $db_user, $db_passw, $db_name);
 if ( ! $res) exit('db connect error');
 
 
+
+
 class DB
 {
     private $w = false;
