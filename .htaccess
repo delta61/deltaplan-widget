@@ -8,6 +8,7 @@ php_value date.timezone Europe/Moscow
 RewriteEngine On
 RewriteBase /
 
+RewriteRule ^cdn/main.js$ cdn/main.php [L]
 
 # without www
 #	RewriteCond %{HTTP_HOST} .
