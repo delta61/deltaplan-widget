@@ -1,7 +1,11 @@
 <?php
-ini_set('error_reporting', E_ALL);
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1); 
+    ini_set('error_reporting', E_ALL);
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1); 
+
+
+
+
 
     define('MICROTIME_START',microtime(true));
 
@@ -14,6 +18,7 @@ ini_set('display_startup_errors', 1);
 
     //define('DROOT',dirname(__DIR__));
     define('DROOT', '/home/d/deltaltdru/deltaplan-widget/public_html/');
+    define('INCLUDED', true);
 
     if ( ! defined('WITHOUT_DB')) {
         require_once(DROOT.'/inc/db.php');
@@ -27,21 +32,25 @@ ini_set('display_startup_errors', 1);
     }
 
 
-    if (isset($_GET['register'])){
-        if (!isset($_GET['email']) || $_GET['email'] == '') {
-            echo 'Введите E-mail';
-        } else {
+    // if (isset($_GET['register'])){
+    //     if (!isset($_GET['email']) || $_GET['email'] == '') {
+    //         echo 'Введите E-mail';
+    //     } else {
             
 
 
-        }
+    //     }
 
-    }
+    // }
  
 
 ?>
 
-<p>Регистрация</p> 
+
+
+
+
+<!-- <p>Регистрация</p> 
 
 <form>
     <label for="email">E-mail</label>
@@ -58,4 +67,4 @@ ini_set('display_startup_errors', 1);
     <input name="email" />
     <label for="email">Password</label>
     <input name="password" />
-</form>
+</form> -->
