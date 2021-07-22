@@ -1,7 +1,0 @@
-<!-- Buran.MultiButton Widget -->
-<script>
-   (function(p,e,t,r,i,k,a){p[i]=p[i]||function(){(p[i].a=p[i].a||[]).push(arguments)};
-   k=e.createElement(t),a=e.getElementsByTagName(t),k.async=1,k.src=r,a[a.length-1].parentNode.insertBefore(k,a[a.length-1])})
-   (window, document, "script", "http://deltaltdru.beget.tech/cdn/1000/main.js");
-</script>
-<!-- Buran.MultiButton Widget -->
